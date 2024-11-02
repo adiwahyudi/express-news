@@ -1,0 +1,9 @@
+import Joi from "joi";
+
+export { registerRequest, loginRequest } from './auth.js';
+export { categoryRequest } from './category.js'
+export { createNewsRequest, updateNewsRequest } from './news.js'
+
+export const getPathById = Joi.object().keys({
+    id: Joi.number().required()
+});
